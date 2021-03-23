@@ -1,17 +1,42 @@
 <!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alfatta Rezqa</title>
+  <style>
+    body, body *{
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #CAD8EF;
+    }
+    body > #app > .loader {
+      height: 95vh;
+      background-color: rgba(255, 255, 255, .8);
+      border-bottom-right-radius: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    body > #app > .loader > .loader-logo {
+      width: 75px;
+      height: 100px;
+      animation: flip 3s infinite;
+    }
+    @keyframes flip {
+      80% { transform: rotateY(0deg); }
+      90% { transform: rotateY(180deg); }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div class="loader">
+      <img src="logo.svg" class="loader-logo" />
+    </div>
+  </div>
+</body>
 </html>
